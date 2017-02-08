@@ -38,7 +38,7 @@
           {
             "1": "RouteConfig",
             "2": [
-              "const [const Redirect(path: '/', redirectTo: const ['CrisisCenter']), const Route(path: '/crisis-center/...', name: 'CrisisCenter', component: CrisisCenterComponent), const Route(path: '/heroes', name: 'Heroes', component: HeroesComponent), const Route(path: '/hero/:id', name: 'HeroDetail', component: HeroDetailComponent), const Route(path: '/**', name: 'NotFound', component: NotFoundComponent)]"
+              "const [const Redirect(path: '/', redirectTo: const ['Heroes']), const Route(path: '/crisis-center/...', name: 'CrisisCenter', component: CrisisCenterComponent), const Route(path: '/heroes', name: 'Heroes', component: HeroesComponent), const Route(path: '/hero/:id', name: 'HeroDetail', component: HeroDetailComponent), const Route(path: '/**', name: 'NotFound', component: NotFoundComponent)]"
             ],
             "4": false
           }
