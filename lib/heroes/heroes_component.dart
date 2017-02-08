@@ -43,6 +43,6 @@ class HeroesComponent implements OnInit {
 
   Future<Null> gotoDetail() => _router.navigate([
         'HeroDetail',
-        selectedHero.id.toString() // {'id': selectedHero.id.toString()}
+        {'id': selectedHero.id.toString()}
       ]);
 }

@@ -28,7 +28,7 @@ import 'not_found_component.dart';
     directives: const [ROUTER_DIRECTIVES],
     providers: const [HeroService, ROUTER_PROVIDERS])
 @RouteConfig(const [
-  const Redirect(path: '/', redirectTo: const ['CrisisCenter']),
+  const Redirect(path: '/', redirectTo: const ['Heroes']),
   const Route(
       path: '/crisis-center/...',
       name: 'CrisisCenter',
