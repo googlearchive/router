@@ -76,10 +76,12 @@
       "hostAttributes": {},
       "lifecycleHooks": [],
       "template": {
-        "encapsulation": 2,
-        "template": "      <h1>Angular Router</h1>\n      <nav>\n        <a [routerLink]=\"['CrisisCenter']\">Crisis Center</a>\n        <a [routerLink]=\"['Heroes']\">Heroes</a>\n        <!--\n        <a [routerLink]=\"['CrisisCenter', 'CrisisDetail', {'id': '1'}]\">Dragon Crisis</a>\n        -->\n      </nav>\n      <router-outlet></router-outlet>\n      <!-- Not yet used:\n      <router-outlet name=\"popup\"></router-outlet>\n      -->\n    ",
+        "encapsulation": 0,
+        "template": "      <h1>Angular Router</h1>\n      <nav>\n        <a [routerLink]=\"['CrisisCenter']\">Crisis Center</a>\n        <a [routerLink]=\"['Heroes']\">Heroes</a>\n        <!--\n        <a [routerLink]=\"['CrisisCenter', 'CrisisDetail', {'id': '1'}]\">Dragon Crisis</a>\n        -->\n      </nav>\n      <router-outlet></router-outlet>\n      <!-- Note: the named outlet is not yet used:\n      <router-outlet></router-outlet>\n      <router-outlet name=\"popup\"></router-outlet>\n      -->\n    ",
         "templateUrl": "asset:router_example/lib/app_component.dart",
-        "styles": [],
+        "styles": [
+          ".router-link-active {color: #039be5;}"
+        ],
         "styleUrls": [],
         "ngContentSelectors": []
       },
