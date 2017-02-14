@@ -21,10 +21,12 @@ import 'not_found_component.dart';
         -->
       </nav>
       <router-outlet></router-outlet>
-      <!-- Not yet used:
+      <!-- Note: the named outlet is not yet used:
+      <router-outlet></router-outlet>
       <router-outlet name="popup"></router-outlet>
       -->
     ''',
+    styles: const ['.router-link-active {color: #039be5;}'],
     directives: const [ROUTER_DIRECTIVES],
     providers: const [HeroService, ROUTER_PROVIDERS])
 @RouteConfig(const [
