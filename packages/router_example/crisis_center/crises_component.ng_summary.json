@@ -21,11 +21,28 @@
       {
         "1": "crisis_service.dart",
         "5": false
+      },
+      {
+        "1": "crisis_detail_component.dart",
+        "5": false
+      },
+      {
+        "1": "crisis_center_home_component.dart",
+        "5": false
       }
     ],
     "5": [
       {
         "1": "CrisesComponent",
+        "4": [
+          {
+            "1": "RouteConfig",
+            "2": [
+              "const [const Route(path: '/', name: 'CrisesHome', component: CrisisCenterHomeComponent, useAsDefault: true), const Route(path: '/:id', name: 'CrisisDetail', component: CrisisDetailComponent)]"
+            ],
+            "4": false
+          }
+        ],
         "5": [
           {
             "1": "CrisisService",
@@ -42,6 +59,11 @@
         ],
         "6": [
           "OnInit"
+        ],
+        "7": [
+          {
+            "2": "ROUTER_DIRECTIVES"
+          }
         ]
       }
     ],
@@ -135,7 +157,7 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<h2>Crises</h2>\n<ul class=\"items\">\n  <li *ngFor=\"let crisis of crises\"\n    [class.selected]=\"crisis === selectedCrisis\"\n    (click)=\"onSelect(crisis)\">\n    <span class=\"badge\">{{crisis.id}}</span> {{crisis.name}}\n  </li>\n</ul>\n",
+        "template": "<h2>Crises</h2>\n<ul class=\"items\">\n  <li *ngFor=\"let crisis of crises\"\n    [class.selected]=\"crisis === selectedCrisis\"\n    (click)=\"onSelect(crisis)\">\n    <span class=\"badge\">{{crisis.id}}</span> {{crisis.name}}\n  </li>\n</ul>\n<router-outlet></router-outlet>\n",
         "templateUrl": "asset:router_example/lib/crisis_center/crises_component.html",
         "styles": [],
         "styleUrls": [

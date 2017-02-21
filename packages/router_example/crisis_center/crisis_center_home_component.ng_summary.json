@@ -1,0 +1,55 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "CrisisCenterHomeComponent"
+      }
+    ],
+    "6": "crisis_center_home_component.dart"
+  },
+  "type": {
+    "CrisisCenterHomeComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "my-crisis-center-home",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "CrisisCenterHomeComponent",
+        "moduleUrl": "asset:router_example/lib/crisis_center/crisis_center_home_component.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 2,
+        "template": "<p>Welcome to the Crisis Center</p>",
+        "templateUrl": "asset:router_example/lib/crisis_center/crisis_center_home_component.dart",
+        "styles": [],
+        "styleUrls": [],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

@@ -51,11 +51,6 @@
         "6": [
           "CanDeactivate",
           "OnInit"
-        ],
-        "7": [
-          {
-            "2": "ROUTER_DIRECTIVES"
-          }
         ]
       }
     ],
@@ -191,7 +186,7 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<div *ngIf=\"crisis != null\">\n  <h2>{{crisis.name}} details!</h2>\n  <div>\n    <label>id: </label>{{crisis.id}}</div>\n  <div>\n    <label>name: </label>\n    <input [(ngModel)]=\"name\" placeholder=\"name\" />\n  </div>\n  <button (click)=\"goBack()\">Cancel</button>\n  <button (click)=\"save()\">Save</button>\n  <button [routerLink]=\"['Heroes']\">Find help (ERRONEOUS LINK)!</button>\n  <button [routerLink]=\"['/Heroes']\">Find help!</button>\n  <button [routerLink]=\"['../../Heroes']\">Find help!</button>\n</div>\n",
+        "template": "<div *ngIf=\"crisis != null\">\n  <h2>{{crisis.name}} details!</h2>\n  <div>\n    <label>id: </label>{{crisis.id}}</div>\n  <div>\n    <label>name: </label>\n    <input [(ngModel)]=\"name\" placeholder=\"name\" />\n  </div>\n  <button (click)=\"goBack()\">Cancel</button>\n  <button (click)=\"save()\">Save</button>\n</div>\n",
         "templateUrl": "asset:router_example/lib/crisis_center/crisis_detail_component.html",
         "styles": [],
         "styleUrls": [

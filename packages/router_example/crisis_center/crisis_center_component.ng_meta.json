@@ -19,10 +19,6 @@
         "5": false
       },
       {
-        "1": "crisis_detail_component.dart",
-        "5": false
-      },
-      {
         "1": "dialog_service.dart",
         "5": false
       }
@@ -34,7 +30,7 @@
           {
             "1": "RouteConfig",
             "2": [
-              "const [const Route(path: '/', name: 'Crises', component: CrisesComponent, useAsDefault: true), const Route(path: '/:id', name: 'CrisisDetail', component: CrisisDetailComponent)]"
+              "const [const Route(path: '/...', name: 'Crises', component: CrisesComponent, useAsDefault: true)]"
             ],
             "4": false
           }
@@ -65,12 +61,8 @@
         "4": "i3"
       },
       {
-        "1": "crisis_detail_component.template.dart",
-        "4": "i4"
-      },
-      {
         "1": "dialog_service.template.dart",
-        "4": "i5"
+        "4": "i4"
       }
     ]
   },
