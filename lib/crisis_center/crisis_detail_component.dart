@@ -10,7 +10,6 @@ import 'dialog_service.dart';
 @Component(
     selector: 'my-crisis-detail',
     templateUrl: 'crisis_detail_component.html',
-    directives: const [ROUTER_DIRECTIVES], // needed for the 'Find help!' link.
     styleUrls: const ['crisis_detail_component.css'])
 class CrisisDetailComponent implements CanDeactivate, OnInit {
   Crisis crisis;
@@ -30,19 +29,18 @@ class CrisisDetailComponent implements CanDeactivate, OnInit {
     if (crisis != null) name = crisis.name;
   }
 
-  Future<Null> save() {
+  Future<Null> save() async {
     crisis.name = name;
     goBack();
   }
 
-  Future<Null> goBack() => _router.navigate([
-        'Crises',
+  Future goBack() => _router.navigate([
+        'CrisesHome',
         crisis == null ? {} : {'id': crisis.id.toString()}
       ]);
 
   @override
-  routerCanDeactivate(ComponentInstruction nextInstruction,
-          ComponentInstruction prevInstruction) =>
+  /*FutureOr<bool>*/ routerCanDeactivate(next, prev) =>
       crisis == null || crisis.name == name
           ? true
           : _dialogService.confirm('Discard changes?');

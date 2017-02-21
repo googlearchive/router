@@ -24,7 +24,7 @@ class HeroDetailComponent implements OnInit {
     if (id != null) hero = await (_heroService.getHero(id));
   }
 
-  Future<Null> goBack() => _router.navigate([
+  Future goBack() => _router.navigate([
         'Heroes',
         hero == null ? {} : {'id': hero.id.toString()}
       ]);

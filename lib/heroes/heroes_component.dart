@@ -41,7 +41,7 @@ class HeroesComponent implements OnInit {
     gotoDetail();
   }
 
-  Future<Null> gotoDetail() => _router.navigate([
+  Future gotoDetail() => _router.navigate([
         'HeroDetail',
         {'id': selectedHero.id.toString()}
       ]);

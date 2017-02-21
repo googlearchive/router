@@ -17,7 +17,7 @@ import 'not_found_component.dart';
         <a [routerLink]="['CrisisCenter']">Crisis Center</a>
         <a [routerLink]="['Heroes']">Heroes</a>
         <!--
-        <a [routerLink]="['CrisisCenter', 'CrisisDetail', {'id': '1'}]">Dragon Crisis</a>
+        <a [routerLink]="['CrisisCenter', 'Crises', 'CrisisDetail', {'id': '1'}]">Dragon Crisis</a>
         -->
       </nav>
       <router-outlet></router-outlet>

@@ -5,11 +5,24 @@ import 'package:angular2/router.dart';
 
 import 'crisis.dart';
 import 'crisis_service.dart';
+import 'crisis_detail_component.dart';
+import 'crisis_center_home_component.dart';
 
 @Component(
-    selector: 'my-crises',
-    templateUrl: 'crises_component.html',
-    styleUrls: const ['crises_component.css'])
+  selector: 'my-crises',
+  templateUrl: 'crises_component.html',
+  styleUrls: const ['crises_component.css'],
+  directives: const [ROUTER_DIRECTIVES],
+)
+@RouteConfig(const [
+  const Route(
+      path: '/',
+      name: 'CrisesHome',
+      component: CrisisCenterHomeComponent,
+      useAsDefault: true),
+  const Route(
+      path: '/:id', name: 'CrisisDetail', component: CrisisDetailComponent),
+])
 class CrisesComponent implements OnInit {
   final Router _router;
   final RouteParams _routeParams;
@@ -41,7 +54,7 @@ class CrisesComponent implements OnInit {
     gotoDetail();
   }
 
-  Future<Null> gotoDetail() => _router.navigate([
+  Future gotoDetail() => _router.navigate([
         'CrisisDetail',
         {'id': selectedCrisis.id.toString()}
       ]);
