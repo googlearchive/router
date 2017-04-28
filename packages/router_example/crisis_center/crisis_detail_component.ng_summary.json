@@ -50,7 +50,11 @@
         ],
         "6": [
           "CanDeactivate",
-          "OnInit"
+          "CanReuse",
+          "OnActivate",
+          "OnDeactivate",
+          "OnInit",
+          "OnReuse"
         ]
       }
     ],
