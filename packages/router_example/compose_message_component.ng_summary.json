@@ -7,7 +7,7 @@
         "5": false
       },
       {
-        "1": "package:angular2/core.dart",
+        "1": "package:angular2/angular2.dart",
         "5": false
       },
       {
@@ -22,6 +22,11 @@
           {
             "1": "Router",
             "4": "_router"
+          }
+        ],
+        "7": [
+          {
+            "2": "COMMON_DIRECTIVES"
           }
         ]
       }
