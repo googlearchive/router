@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:angular2/core.dart';
+import 'package:angular2/angular2.dart';
 import 'package:angular2/router.dart';
 
 import 'crisis.dart';
@@ -12,7 +12,7 @@ import 'crisis_center_home_component.dart';
   selector: 'my-crises',
   templateUrl: 'crises_component.html',
   styleUrls: const ['crises_component.css'],
-  directives: const [ROUTER_DIRECTIVES],
+  directives: const [CORE_DIRECTIVES, ROUTER_DIRECTIVES],
 )
 @RouteConfig(const [
   const Route(

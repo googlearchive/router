@@ -1,7 +1,7 @@
 // NOTE: Not currently used. Awaiting support for auxiliary routes.
 import 'dart:async';
 
-import 'package:angular2/core.dart';
+import 'package:angular2/angular2.dart';
 import 'package:angular2/router.dart';
 // import 'animations.dart' show slideInDownAnimation;
 
@@ -10,6 +10,7 @@ import 'package:angular2/router.dart';
   templateUrl: 'compose_message_component.html',
   styles: const [':host { position: relative; bottom: 10%; }'],
   // animations: const [slideInDownAnimation]
+  directives: const [COMMON_DIRECTIVES],
 )
 class ComposeMessageComponent {
   Router _router;
