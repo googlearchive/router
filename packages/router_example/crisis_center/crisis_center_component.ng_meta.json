@@ -3,7 +3,7 @@
     "1": "",
     "3": [
       {
-        "1": "package:angular2/core.dart",
+        "1": "package:angular2/angular2.dart",
         "5": false
       },
       {
@@ -45,7 +45,7 @@
     "6": "crisis_center_component.dart",
     "7": [
       {
-        "1": "package:angular2/core.template.dart",
+        "1": "package:angular2/angular2.template.dart",
         "4": "i0"
       },
       {
@@ -70,7 +70,7 @@
     "CrisisCenterComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "my-crisis-center",
+      "selector": "crisis-center",
       "exportAs": null,
       "type": {
         "class": "Type",

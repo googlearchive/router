@@ -69,7 +69,7 @@
     "CrisisDetailComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "my-crisis-detail",
+      "selector": "crisis-detail",
       "exportAs": null,
       "type": {
         "class": "Type",

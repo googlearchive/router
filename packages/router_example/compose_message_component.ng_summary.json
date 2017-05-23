@@ -37,7 +37,7 @@
     "ComposeMessageComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "my-crisis-center",
+      "selector": "crisis-center",
       "exportAs": null,
       "type": {
         "class": "Type",
