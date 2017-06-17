@@ -79,7 +79,7 @@
       "type": {
         "class": "Type",
         "name": "HeroesComponent",
-        "moduleUrl": "asset:router_example/lib/heroes/heroes_component.dart",
+        "moduleUrl": "asset:router_example/lib/src/heroes/heroes_component.dart",
         "prefix": null,
         "isHost": false,
         "value": null,
@@ -90,7 +90,7 @@
               "identifier": {
                 "class": "Identifier",
                 "name": "HeroService",
-                "moduleUrl": "asset:router_example/lib/heroes/hero_service.dart",
+                "moduleUrl": "asset:router_example/lib/src/heroes/hero_service.dart",
                 "prefix": null,
                 "value": null
               },
@@ -159,10 +159,10 @@
       "template": {
         "encapsulation": 0,
         "template": "<h2>Heroes</h2>\n<ul class=\"items\">\n  <li *ngFor=\"let hero of heroes\"\n    [class.selected]=\"hero === selectedHero\"\n    (click)=\"onSelect(hero)\">\n    <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n  </li>\n</ul>\n",
-        "templateUrl": "asset:router_example/lib/heroes/heroes_component.html",
+        "templateUrl": "asset:router_example/lib/src/heroes/heroes_component.html",
         "styles": [],
         "styleUrls": [
-          "asset:router_example/lib/heroes/heroes_component.css"
+          "asset:router_example/lib/src/heroes/heroes_component.css"
         ],
         "ngContentSelectors": []
       },

@@ -23,13 +23,26 @@
         "5": false
       },
       {
-        "1": "dialog_service.dart",
+        "1": "crisis_detail_component.dart",
+        "5": false
+      },
+      {
+        "1": "crisis_center_home_component.dart",
         "5": false
       }
     ],
     "5": [
       {
-        "1": "CrisisDetailComponent",
+        "1": "CrisesComponent",
+        "4": [
+          {
+            "1": "RouteConfig",
+            "2": [
+              "const [const Route(path: '/', name: 'CrisesHome', component: CrisisCenterHomeComponent, useAsDefault: true), const Route(path: '/:id', name: 'CrisisDetail', component: CrisisDetailComponent)]"
+            ],
+            "4": false
+          }
+        ],
         "5": [
           {
             "1": "CrisisService",
@@ -42,39 +55,33 @@
           {
             "1": "RouteParams",
             "4": "_routeParams"
-          },
-          {
-            "1": "DialogService",
-            "4": "_dialogService"
           }
         ],
         "6": [
-          "CanDeactivate",
-          "CanReuse",
-          "OnActivate",
-          "OnDeactivate",
-          "OnInit",
-          "OnReuse"
+          "OnInit"
         ],
         "7": [
           {
-            "2": "COMMON_DIRECTIVES"
+            "2": "CORE_DIRECTIVES"
+          },
+          {
+            "2": "ROUTER_DIRECTIVES"
           }
         ]
       }
     ],
-    "6": "crisis_detail_component.dart"
+    "6": "crises_component.dart"
   },
   "type": {
-    "CrisisDetailComponent": {
+    "CrisesComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "crisis-detail",
+      "selector": "my-crises",
       "exportAs": null,
       "type": {
         "class": "Type",
-        "name": "CrisisDetailComponent",
-        "moduleUrl": "asset:router_example/lib/crisis_center/crisis_detail_component.dart",
+        "name": "CrisesComponent",
+        "moduleUrl": "asset:router_example/lib/src/crisis_center/crises_component.dart",
         "prefix": null,
         "isHost": false,
         "value": null,
@@ -138,26 +145,6 @@
             "isSkipSelf": false,
             "isOptional": false,
             "isValue": false
-          },
-          {
-            "token": {
-              "value": null,
-              "identifier": {
-                "class": "Identifier",
-                "name": "DialogService",
-                "moduleUrl": null,
-                "prefix": null,
-                "value": null
-              },
-              "identifierIsInstance": false
-            },
-            "value": null,
-            "isAttribute": false,
-            "isSelf": false,
-            "isHost": false,
-            "isSkipSelf": false,
-            "isOptional": false,
-            "isValue": false
           }
         ]
       },
@@ -173,11 +160,11 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<div *ngIf=\"crisis != null\">\n  <h2>{{crisis.name}} details!</h2>\n  <div>\n    <label>id: </label>{{crisis.id}}</div>\n  <div>\n    <label>name: </label>\n    <input [(ngModel)]=\"name\" placeholder=\"name\" />\n  </div>\n  <button (click)=\"goBack()\">Cancel</button>\n  <button (click)=\"save()\">Save</button>\n</div>\n",
-        "templateUrl": "asset:router_example/lib/crisis_center/crisis_detail_component.html",
+        "template": "<h2>Crises</h2>\n<ul class=\"items\">\n  <li *ngFor=\"let crisis of crises\"\n    [class.selected]=\"crisis === selectedCrisis\"\n    (click)=\"onSelect(crisis)\">\n    <span class=\"badge\">{{crisis.id}}</span> {{crisis.name}}\n  </li>\n</ul>\n<router-outlet></router-outlet>\n",
+        "templateUrl": "asset:router_example/lib/src/crisis_center/crises_component.html",
         "styles": [],
         "styleUrls": [
-          "asset:router_example/lib/crisis_center/crisis_detail_component.css"
+          "asset:router_example/lib/src/crisis_center/crises_component.css"
         ],
         "ngContentSelectors": []
       },

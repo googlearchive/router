@@ -4,7 +4,7 @@
     "Crisis": {
       "class": "Identifier",
       "name": "Crisis",
-      "moduleUrl": "asset:router_example/lib/crisis_center/crisis.dart",
+      "moduleUrl": "asset:router_example/lib/src/crisis_center/crisis.dart",
       "prefix": null,
       "value": null
     }

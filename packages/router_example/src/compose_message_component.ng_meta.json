@@ -52,7 +52,7 @@
       "type": {
         "class": "Type",
         "name": "ComposeMessageComponent",
-        "moduleUrl": "asset:router_example/lib/compose_message_component.dart",
+        "moduleUrl": "asset:router_example/lib/src/compose_message_component.dart",
         "prefix": null,
         "isHost": false,
         "value": null,
@@ -90,7 +90,7 @@
       "template": {
         "encapsulation": 0,
         "template": "<h3>Contact Crisis Center</h3>\n<div *ngIf=\"details != null\">\n    {{ details }}\n</div>\n<div>\n    <div>\n        <label>Message: </label>\n    </div>\n    <div>\n        <textarea [(ngModel)]=\"message\" rows=\"10\" cols=\"35\" [disabled]=\"sending\"></textarea>\n    </div>\n</div>\n<p *ngIf=\"!sending\">\n    <button (click)=\"send()\">Send</button>\n    <button (click)=\"cancel()\">Cancel</button>\n</p>\n",
-        "templateUrl": "asset:router_example/lib/compose_message_component.html",
+        "templateUrl": "asset:router_example/lib/src/compose_message_component.html",
         "styles": [
           ":host { position: relative; bottom: 10%; }"
         ],

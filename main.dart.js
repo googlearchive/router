@@ -10858,17 +10858,17 @@ wI:{"^":"y;fx,fy,go,id,k1,k2,k3,k4,r1,r2,rx,ry,x1,x2,y1,y2,ci,a,b,c,d,e,f,r,x,y,
 L:function(){var z,y,x,w,v,u,t,s,r,q,p,o
 z=this.bd(this.r)
 y=document
-z.appendChild(y.createTextNode("      "))
+z.appendChild(y.createTextNode("    "))
 x=S.a_(y,"h1",z)
 this.fx=x
 this.ai(x)
 w=y.createTextNode("Angular Router")
 this.fx.appendChild(w)
-z.appendChild(y.createTextNode("\n      "))
+z.appendChild(y.createTextNode("\n    "))
 x=S.a_(y,"nav",z)
 this.fy=x
 this.ai(x)
-v=y.createTextNode("\n        ")
+v=y.createTextNode("\n      ")
 this.fy.appendChild(v)
 x=S.a_(y,"a",this.fy)
 this.go=x
@@ -10878,7 +10878,7 @@ u=this.d
 this.id=V.fT(x.V(C.l,u),x.V(C.G,u))
 t=y.createTextNode("Crisis Center")
 this.go.appendChild(t)
-s=y.createTextNode("\n        ")
+s=y.createTextNode("\n      ")
 this.fy.appendChild(s)
 r=S.a_(y,"a",this.fy)
 this.k1=r
@@ -10886,19 +10886,19 @@ this.ap(r)
 this.k2=V.fT(x.V(C.l,u),x.V(C.G,u))
 q=y.createTextNode("Heroes")
 this.k1.appendChild(q)
-p=y.createTextNode("\n        ")
+p=y.createTextNode("\n      ")
 this.fy.appendChild(p)
-o=y.createTextNode("\n      ")
+o=y.createTextNode("\n    ")
 this.fy.appendChild(o)
-z.appendChild(y.createTextNode("\n      "))
+z.appendChild(y.createTextNode("\n    "))
 r=S.a_(y,"router-outlet",z)
 this.k3=r
 this.ai(r)
 r=new V.cl(14,null,this,this.k3,null,null,null)
 this.k4=r
 this.r1=U.es(r,x.V(C.u,u),x.V(C.l,u),null)
-z.appendChild(y.createTextNode("\n      "))
 z.appendChild(y.createTextNode("\n    "))
+z.appendChild(y.createTextNode("\n  "))
 y=this.go
 u=this.id
 J.b3(y,"click",this.bM(u.gib(u)),null)

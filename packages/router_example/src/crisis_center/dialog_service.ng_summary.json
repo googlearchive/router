@@ -7,21 +7,17 @@
         "5": false
       },
       {
+        "1": "dart:html",
+        "5": false
+      },
+      {
         "1": "package:angular2/angular2.dart",
-        "5": false
-      },
-      {
-        "1": "hero.dart",
-        "5": false
-      },
-      {
-        "1": "mock_heroes.dart",
         "5": false
       }
     ],
     "5": [
       {
-        "1": "HeroService",
+        "1": "DialogService",
         "4": [
           {
             "1": "Injectable",
@@ -30,13 +26,13 @@
         ]
       }
     ],
-    "6": "hero_service.dart"
+    "6": "dialog_service.dart"
   },
   "type": {
-    "HeroService": {
+    "DialogService": {
       "class": "Type",
-      "name": "HeroService",
-      "moduleUrl": "asset:router_example/lib/heroes/hero_service.dart",
+      "name": "DialogService",
+      "moduleUrl": "asset:router_example/lib/src/crisis_center/dialog_service.dart",
       "prefix": null,
       "isHost": false,
       "value": null,

@@ -11,23 +11,23 @@
         "5": false
       },
       {
-        "1": "crisis_center/crisis_center_component.dart",
+        "1": "src/crisis_center/crisis_center_component.dart",
         "5": false
       },
       {
-        "1": "heroes/hero_detail_component.dart",
+        "1": "src/heroes/hero_detail_component.dart",
         "5": false
       },
       {
-        "1": "heroes/hero_service.dart",
+        "1": "src/heroes/hero_service.dart",
         "5": false
       },
       {
-        "1": "heroes/heroes_component.dart",
+        "1": "src/heroes/heroes_component.dart",
         "5": false
       },
       {
-        "1": "not_found_component.dart",
+        "1": "src/not_found_component.dart",
         "5": false
       }
     ],
@@ -77,7 +77,7 @@
       "lifecycleHooks": [],
       "template": {
         "encapsulation": 0,
-        "template": "      <h1>Angular Router</h1>\n      <nav>\n        <a [routerLink]=\"['CrisisCenter']\">Crisis Center</a>\n        <a [routerLink]=\"['Heroes']\">Heroes</a>\n        <!--\n        <a [routerLink]=\"['CrisisCenter', 'Crises', 'CrisisDetail', {'id': '1'}]\">Dragon Crisis</a>\n        -->\n      </nav>\n      <router-outlet></router-outlet>\n      <!-- Note: the named outlet is not yet used:\n      <router-outlet></router-outlet>\n      <router-outlet name=\"popup\"></router-outlet>\n      -->\n    ",
+        "template": "    <h1>Angular Router</h1>\n    <nav>\n      <a [routerLink]=\"['CrisisCenter']\">Crisis Center</a>\n      <a [routerLink]=\"['Heroes']\">Heroes</a>\n      <!--\n      <a [routerLink]=\"['CrisisCenter', 'Crises', 'CrisisDetail', {'id': '1'}]\">Dragon Crisis</a>\n      -->\n    </nav>\n    <router-outlet></router-outlet>\n    <!-- Note: the named outlet is not yet used:\n    <router-outlet></router-outlet>\n    <router-outlet name=\"popup\"></router-outlet>\n    -->\n  ",
         "templateUrl": "asset:router_example/lib/app_component.dart",
         "styles": [
           ".router-link-active {color: #039be5;}"

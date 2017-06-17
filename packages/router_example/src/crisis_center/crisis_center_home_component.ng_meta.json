@@ -9,21 +9,27 @@
     ],
     "5": [
       {
-        "1": "NotFoundComponent"
+        "1": "CrisisCenterHomeComponent"
       }
     ],
-    "6": "not_found_component.dart"
+    "6": "crisis_center_home_component.dart",
+    "7": [
+      {
+        "1": "package:angular2/angular2.template.dart",
+        "4": "i0"
+      }
+    ]
   },
   "type": {
-    "NotFoundComponent": {
+    "CrisisCenterHomeComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "my-not-found",
+      "selector": "crisis-center-home",
       "exportAs": null,
       "type": {
         "class": "Type",
-        "name": "NotFoundComponent",
-        "moduleUrl": "asset:router_example/lib/not_found_component.dart",
+        "name": "CrisisCenterHomeComponent",
+        "moduleUrl": "asset:router_example/lib/src/crisis_center/crisis_center_home_component.dart",
         "prefix": null,
         "isHost": false,
         "value": null,
@@ -39,8 +45,8 @@
       "lifecycleHooks": [],
       "template": {
         "encapsulation": 2,
-        "template": "<h2>Page not found</h2>",
-        "templateUrl": "asset:router_example/lib/not_found_component.dart",
+        "template": "<p>Welcome to the Crisis Center</p>",
+        "templateUrl": "asset:router_example/lib/src/crisis_center/crisis_center_home_component.dart",
         "styles": [],
         "styleUrls": [],
         "ngContentSelectors": []

@@ -25,7 +25,7 @@
     ],
     "5": [
       {
-        "1": "HeroDetailComponent",
+        "1": "HeroesComponent",
         "5": [
           {
             "1": "HeroService",
@@ -45,41 +45,23 @@
         ],
         "7": [
           {
-            "2": "COMMON_DIRECTIVES"
+            "2": "CORE_DIRECTIVES"
           }
         ]
       }
     ],
-    "6": "hero_detail_component.dart",
-    "7": [
-      {
-        "1": "package:angular2/angular2.template.dart",
-        "4": "i0"
-      },
-      {
-        "1": "package:angular2/router.template.dart",
-        "4": "i1"
-      },
-      {
-        "1": "hero.template.dart",
-        "4": "i2"
-      },
-      {
-        "1": "hero_service.template.dart",
-        "4": "i3"
-      }
-    ]
+    "6": "heroes_component.dart"
   },
   "type": {
-    "HeroDetailComponent": {
+    "HeroesComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "hero-detail",
+      "selector": "my-heroes",
       "exportAs": null,
       "type": {
         "class": "Type",
-        "name": "HeroDetailComponent",
-        "moduleUrl": "asset:router_example/lib/heroes/hero_detail_component.dart",
+        "name": "HeroesComponent",
+        "moduleUrl": "asset:router_example/lib/src/heroes/heroes_component.dart",
         "prefix": null,
         "isHost": false,
         "value": null,
@@ -90,7 +72,7 @@
               "identifier": {
                 "class": "Identifier",
                 "name": "HeroService",
-                "moduleUrl": "asset:router_example/lib/heroes/hero_service.dart",
+                "moduleUrl": null,
                 "prefix": null,
                 "value": null
               },
@@ -110,7 +92,7 @@
               "identifier": {
                 "class": "Identifier",
                 "name": "Router",
-                "moduleUrl": "asset:angular2/lib/src/router/router.dart",
+                "moduleUrl": null,
                 "prefix": null,
                 "value": null
               },
@@ -130,7 +112,7 @@
               "identifier": {
                 "class": "Identifier",
                 "name": "RouteParams",
-                "moduleUrl": "asset:angular2/lib/src/router/instruction.dart",
+                "moduleUrl": null,
                 "prefix": null,
                 "value": null
               },
@@ -158,11 +140,11 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<div *ngIf=\"hero != null\">\n  <h2>{{hero.name}} details!</h2>\n  <div>\n    <label>id: </label>{{hero.id}}</div>\n  <div>\n    <label>name: </label>\n    <input [(ngModel)]=\"hero.name\" placeholder=\"name\" />\n  </div>\n  <button (click)=\"goBack()\">Back</button>\n</div>\n",
-        "templateUrl": "asset:router_example/lib/heroes/hero_detail_component.html",
+        "template": "<h2>Heroes</h2>\n<ul class=\"items\">\n  <li *ngFor=\"let hero of heroes\"\n    [class.selected]=\"hero === selectedHero\"\n    (click)=\"onSelect(hero)\">\n    <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n  </li>\n</ul>\n",
+        "templateUrl": "asset:router_example/lib/src/heroes/heroes_component.html",
         "styles": [],
         "styleUrls": [
-          "asset:router_example/lib/heroes/hero_detail_component.css"
+          "asset:router_example/lib/src/heroes/heroes_component.css"
         ],
         "ngContentSelectors": []
       },

@@ -15,38 +15,21 @@
         "5": false
       },
       {
-        "1": "crisis.dart",
+        "1": "hero.dart",
         "5": false
       },
       {
-        "1": "crisis_service.dart",
-        "5": false
-      },
-      {
-        "1": "crisis_detail_component.dart",
-        "5": false
-      },
-      {
-        "1": "crisis_center_home_component.dart",
+        "1": "hero_service.dart",
         "5": false
       }
     ],
     "5": [
       {
-        "1": "CrisesComponent",
-        "4": [
-          {
-            "1": "RouteConfig",
-            "2": [
-              "const [const Route(path: '/', name: 'CrisesHome', component: CrisisCenterHomeComponent, useAsDefault: true), const Route(path: '/:id', name: 'CrisisDetail', component: CrisisDetailComponent)]"
-            ],
-            "4": false
-          }
-        ],
+        "1": "HeroDetailComponent",
         "5": [
           {
-            "1": "CrisisService",
-            "4": "_crisisService"
+            "1": "HeroService",
+            "4": "_heroService"
           },
           {
             "1": "Router",
@@ -62,26 +45,23 @@
         ],
         "7": [
           {
-            "2": "CORE_DIRECTIVES"
-          },
-          {
-            "2": "ROUTER_DIRECTIVES"
+            "2": "COMMON_DIRECTIVES"
           }
         ]
       }
     ],
-    "6": "crises_component.dart"
+    "6": "hero_detail_component.dart"
   },
   "type": {
-    "CrisesComponent": {
+    "HeroDetailComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "my-crises",
+      "selector": "hero-detail",
       "exportAs": null,
       "type": {
         "class": "Type",
-        "name": "CrisesComponent",
-        "moduleUrl": "asset:router_example/lib/crisis_center/crises_component.dart",
+        "name": "HeroDetailComponent",
+        "moduleUrl": "asset:router_example/lib/src/heroes/hero_detail_component.dart",
         "prefix": null,
         "isHost": false,
         "value": null,
@@ -91,7 +71,7 @@
               "value": null,
               "identifier": {
                 "class": "Identifier",
-                "name": "CrisisService",
+                "name": "HeroService",
                 "moduleUrl": null,
                 "prefix": null,
                 "value": null
@@ -160,11 +140,11 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<h2>Crises</h2>\n<ul class=\"items\">\n  <li *ngFor=\"let crisis of crises\"\n    [class.selected]=\"crisis === selectedCrisis\"\n    (click)=\"onSelect(crisis)\">\n    <span class=\"badge\">{{crisis.id}}</span> {{crisis.name}}\n  </li>\n</ul>\n<router-outlet></router-outlet>\n",
-        "templateUrl": "asset:router_example/lib/crisis_center/crises_component.html",
+        "template": "<div *ngIf=\"hero != null\">\n  <h2>{{hero.name}} details!</h2>\n  <div>\n    <label>id: </label>{{hero.id}}</div>\n  <div>\n    <label>name: </label>\n    <input [(ngModel)]=\"hero.name\" placeholder=\"name\" />\n  </div>\n  <button (click)=\"goBack()\">Back</button>\n</div>\n",
+        "templateUrl": "asset:router_example/lib/src/heroes/hero_detail_component.html",
         "styles": [],
         "styleUrls": [
-          "asset:router_example/lib/crisis_center/crises_component.css"
+          "asset:router_example/lib/src/heroes/hero_detail_component.css"
         ],
         "ngContentSelectors": []
       },

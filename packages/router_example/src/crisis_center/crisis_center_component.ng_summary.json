@@ -53,7 +53,7 @@
       "type": {
         "class": "Type",
         "name": "CrisisCenterComponent",
-        "moduleUrl": "asset:router_example/lib/crisis_center/crisis_center_component.dart",
+        "moduleUrl": "asset:router_example/lib/src/crisis_center/crisis_center_component.dart",
         "prefix": null,
         "isHost": false,
         "value": null,
@@ -70,7 +70,7 @@
       "template": {
         "encapsulation": 2,
         "template": "      <router-outlet></router-outlet>\n    ",
-        "templateUrl": "asset:router_example/lib/crisis_center/crisis_center_component.dart",
+        "templateUrl": "asset:router_example/lib/src/crisis_center/crisis_center_component.dart",
         "styles": [],
         "styleUrls": [],
         "ngContentSelectors": []
