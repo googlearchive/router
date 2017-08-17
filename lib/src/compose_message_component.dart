@@ -2,6 +2,7 @@
 import 'dart:async';
 
 import 'package:angular/angular.dart';
+import 'package:angular_forms/angular_forms.dart';
 import 'package:angular_router/angular_router.dart';
 // import 'animations.dart' show slideInDownAnimation;
 
@@ -10,7 +11,7 @@ import 'package:angular_router/angular_router.dart';
   templateUrl: 'compose_message_component.html',
   styles: const [':host { position: relative; bottom: 10%; }'],
   // animations: const [slideInDownAnimation]
-  directives: const [COMMON_DIRECTIVES],
+  directives: const [CORE_DIRECTIVES, formDirectives],
 )
 class ComposeMessageComponent {
   Router _router;
