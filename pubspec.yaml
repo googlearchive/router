@@ -10,6 +10,9 @@ dependencies:
   angular_forms: ^1.0.1-alpha
   angular_router: ^2.0.0-alpha
 
+dependency_overrides:
+  angular: ^5.0.0-alpha
+
 dev_dependencies:
   browser: ^0.10.0
   dart_to_js_script_rewriter: ^1.0.1
