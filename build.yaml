@@ -1,0 +1,7 @@
+targets:
+  router_example:
+    builders:
+      build_web_compilers|entrypoint:
+        options:
+          compiler: dart2js
+  
