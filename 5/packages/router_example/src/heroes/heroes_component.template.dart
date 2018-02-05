@@ -95,7 +95,7 @@ class _ViewHeroesComponent1 extends AppView<import2.HeroesComponent> {
   import3.Element _el_0;
   import3.Element _el_1;
   import3.Text _text_2;
-  import3.Text _text_3;
+  import3.Text _text_4;
   bool _expr_0;
   var _expr_1;
   var _expr_2;
@@ -112,8 +112,10 @@ class _ViewHeroesComponent1 extends AppView<import2.HeroesComponent> {
     addShimE(_el_1);
     _text_2 = new import3.Text('');
     _el_1.append(_text_2);
-    _text_3 = new import3.Text('');
+    import3.Text _text_3 = new import3.Text(' ');
     _el_0.append(_text_3);
+    _text_4 = new import3.Text('');
+    _el_0.append(_text_4);
     _el_0.addEventListener('click', eventHandler1(_handle_click_0_0));
     init0(_el_0);
     return null;
@@ -133,9 +135,9 @@ class _ViewHeroesComponent1 extends AppView<import2.HeroesComponent> {
       _text_2.text = currVal_1;
       _expr_1 = currVal_1;
     }
-    final currVal_2 = import9.interpolate1(' ', local_hero.name, '');
+    final currVal_2 = import9.interpolate0(local_hero.name);
     if (!identical(_expr_2, currVal_2)) {
-      _text_3.text = currVal_2;
+      _text_4.text = currVal_2;
       _expr_2 = currVal_2;
     }
   }

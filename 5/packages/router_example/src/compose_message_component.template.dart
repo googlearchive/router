@@ -176,7 +176,7 @@ class _ViewComposeMessageComponent1 extends AppView<import1.ComposeMessageCompon
   @override
   void detectChangesInternal() {
     final import1.ComposeMessageComponent _ctx = ctx;
-    final currVal_0 = import10.interpolate0(_ctx.details);
+    final currVal_0 = (_ctx.details ?? '');
     if (!identical(_expr_0, currVal_0)) {
       _text_1.text = currVal_0;
       _expr_0 = currVal_0;
