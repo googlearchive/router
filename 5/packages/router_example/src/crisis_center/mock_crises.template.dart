@@ -8,7 +8,6 @@
 import 'mock_crises.dart';
 export 'mock_crises.dart';
 import 'crisis.dart';
-// Required for initReflector().
 import 'crisis.template.dart' as _ref0;
 
 var _visited = false;
@@ -17,5 +16,6 @@ void initReflector() {
     return;
   }
   _visited = true;
+
   _ref0.initReflector();
 }

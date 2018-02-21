@@ -14,7 +14,6 @@ import 'package:angular_router/angular_router.dart';
 import 'crisis.dart';
 import 'crisis_service.dart';
 import 'dialog_service.dart';
-// Required for initReflector().
 import 'package:angular/src/di/reflector.dart' as _ngRef;
 import 'crisis.template.dart' as _ref0;
 import 'crisis_service.template.dart' as _ref1;
@@ -22,7 +21,6 @@ import 'dialog_service.template.dart' as _ref2;
 import 'package:angular/angular.template.dart' as _ref3;
 import 'package:angular_forms/angular_forms.template.dart' as _ref4;
 import 'package:angular_router/angular_router.template.dart' as _ref5;
-
 import 'package:router_example/src/crisis_center/crisis_detail_component.css.shim.dart' as import0;
 import 'package:angular/src/core/linker/app_view.dart';
 import 'crisis_detail_component.dart' as import2;
@@ -253,14 +251,12 @@ void initReflector() {
     return;
   }
   _visited = true;
+
+  _ngRef.registerComponent(CrisisDetailComponent, CrisisDetailComponentNgFactory);
   _ref0.initReflector();
   _ref1.initReflector();
   _ref2.initReflector();
   _ref3.initReflector();
   _ref4.initReflector();
   _ref5.initReflector();
-  _ngRef.registerComponent(
-    CrisisDetailComponent,
-    CrisisDetailComponentNgFactory,
-  );
 }

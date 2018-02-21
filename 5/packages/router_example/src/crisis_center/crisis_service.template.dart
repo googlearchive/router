@@ -11,7 +11,6 @@ import 'dart:async';
 import 'package:angular/angular.dart';
 import 'crisis.dart';
 import 'mock_crises.dart';
-// Required for initReflector().
 import 'package:angular/src/di/reflector.dart' as _ngRef;
 import 'crisis.template.dart' as _ref0;
 import 'mock_crises.template.dart' as _ref1;
@@ -23,11 +22,9 @@ void initReflector() {
     return;
   }
   _visited = true;
+
+  _ngRef.registerFactory(CrisisService, () => new CrisisService());
   _ref0.initReflector();
   _ref1.initReflector();
   _ref2.initReflector();
-  _ngRef.registerFactory(
-    CrisisService,
-    () => new CrisisService(),
-  );
 }
