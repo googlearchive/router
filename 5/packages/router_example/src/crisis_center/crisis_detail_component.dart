@@ -12,7 +12,7 @@ import 'dialog_service.dart';
   selector: 'crisis-detail',
   templateUrl: 'crisis_detail_component.html',
   styleUrls: const ['crisis_detail_component.css'],
-  directives: const [CORE_DIRECTIVES, formDirectives],
+  directives: const [coreDirectives, formDirectives],
 )
 class CrisisDetailComponent
     implements

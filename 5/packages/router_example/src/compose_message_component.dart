@@ -11,7 +11,7 @@ import 'package:angular_router/angular_router.dart';
   templateUrl: 'compose_message_component.html',
   styles: const [':host { position: relative; bottom: 10%; }'],
   // animations: const [slideInDownAnimation]
-  directives: const [CORE_DIRECTIVES, formDirectives],
+  directives: const [coreDirectives, formDirectives],
 )
 class ComposeMessageComponent {
   Router _router;
