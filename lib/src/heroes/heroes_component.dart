@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 
+import '../app_route_paths.dart' as paths;
 import 'hero.dart';
 import 'hero_service.dart';
 
@@ -12,30 +13,30 @@ import 'hero_service.dart';
   styleUrls: const ['heroes_component.css'],
   directives: const [coreDirectives],
 )
-class HeroesComponent implements OnInit {
-  final Router _router;
-  final RouteParams _routeParams;
+class HeroesComponent implements OnActivate {
   final HeroService _heroService;
+  final Router _router;
   List<Hero> heroes;
   Hero selectedHero;
 
-  HeroesComponent(this._heroService, this._router, this._routeParams);
+  HeroesComponent(this._heroService, this._router);
 
-  Future<Null> getHeroes() async {
+  Future<void> getHeroes() async {
     heroes = await _heroService.getHeroes();
   }
 
-  Future<Null> ngOnInit() async {
+  @override
+  Future<void> onActivate(_, RouterState current) async {
     await getHeroes();
-    var id = _getId();
+    await _selectHero(current);
+  }
+
+  Future<Null> _selectHero(RouterState routerState) async {
+    var _id = routerState.queryParameters[paths.idParam];
+    var id = int.parse(_id ?? '', onError: (_) => null);
     if (id == null) return;
     selectedHero =
         heroes.firstWhere((hero) => hero.id == id, orElse: () => null);
-  }
-
-  int _getId() {
-    var _id = _routeParams.get('id');
-    return int.parse(_id ?? '', onError: (_) => null);
   }
 
   void onSelect(Hero hero) {
@@ -43,8 +44,6 @@ class HeroesComponent implements OnInit {
     gotoDetail();
   }
 
-  Future gotoDetail() => _router.navigate([
-        'HeroDetail',
-        {'id': selectedHero.id.toString()}
-      ]);
+  Future<NavigationResult> gotoDetail() => _router.navigate(paths.heroDetail
+      .toUrl(parameters: {paths.idParam: selectedHero.id.toString()}));
 }

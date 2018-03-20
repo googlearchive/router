@@ -10,7 +10,7 @@ import 'dialog_service.dart';
     template: '''
       <router-outlet></router-outlet>
     ''',
-    directives: const [ROUTER_DIRECTIVES],
+    directives: const [routerDirectives],
     providers: const [CrisisService, DialogService])
 @RouteConfig(const [
   const Route(

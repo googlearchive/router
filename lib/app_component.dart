@@ -27,19 +27,20 @@ import 'src/not_found_component.dart';
     -->
   ''',
   styles: const ['.router-link-active {color: #039be5;}'],
-  directives: const [ROUTER_DIRECTIVES],
+  directives: const [routerDirectives],
   providers: const [HeroService],
 )
-@RouteConfig(const [
-  const Redirect(path: '/', redirectTo: const ['Heroes']),
-  const Route(
-      path: '/crisis-center/...',
-      name: 'CrisisCenter',
-      component: CrisisCenterComponent),
-  const Route(path: '/heroes', name: 'Heroes', component: HeroesComponent),
-  const Route(
-      path: '/hero/:id', name: 'HeroDetail', component: HeroDetailComponent),
-  // Not yet used: const AuxRoute(path: '/contact', name: 'Contact', component: ComposeMessageComponent),
-  const Route(path: '/**', name: 'NotFound', component: NotFoundComponent)
-])
+// FIXME: WIP
+//@RouteConfig(const [
+//  const Redirect(path: '/', redirectTo: const ['Heroes']),
+//  const Route(
+//      path: '/crisis-center/...',
+//      name: 'CrisisCenter',
+//      component: CrisisCenterComponent),
+//  const Route(path: '/heroes', name: 'Heroes', component: HeroesComponent),
+//  const Route(
+//      path: '/hero/:id', name: 'HeroDetail', component: HeroDetailComponent),
+//  // Not yet used: const AuxRoute(path: '/contact', name: 'Contact', component: ComposeMessageComponent),
+//  const Route(path: '/**', name: 'NotFound', component: NotFoundComponent)
+//])
 class AppComponent {}

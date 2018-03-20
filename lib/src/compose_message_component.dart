@@ -36,10 +36,6 @@ class ComposeMessageComponent {
   void cancel() => closePopup();
 
   void closePopup() {
-    _router.navigate([
-      {
-        'outlets': {'popup': null}
-      }
-    ]);
+    // FIXME: _router.navigate([{'outlets': {'popup': null}}]);
   }
 }
