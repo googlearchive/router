@@ -7,11 +7,11 @@ import 'package:angular_router/angular_router.dart';
 // import 'animations.dart' show slideInDownAnimation;
 
 @Component(
-  selector: 'crisis-center',
+  selector: 'crises',
   templateUrl: 'compose_message_component.html',
-  styles: const [':host { position: relative; bottom: 10%; }'],
-  // animations: const [slideInDownAnimation]
-  directives: const [coreDirectives, formDirectives],
+  styles: [':host { position: relative; bottom: 10%; }'],
+  // animations: [slideInDownAnimation]
+  directives: [coreDirectives, formDirectives],
 )
 class ComposeMessageComponent {
   Router _router;
@@ -25,7 +25,7 @@ class ComposeMessageComponent {
 
   ComposeMessageComponent(this._router);
 
-  Future<Null> send() async {
+  Future<void> send() async {
     sending = true;
     details = 'Sending Message...';
     await new Future.delayed(const Duration(seconds: 2));
@@ -36,6 +36,6 @@ class ComposeMessageComponent {
   void cancel() => closePopup();
 
   void closePopup() {
-    // FIXME: _router.navigate([{'outlets': {'popup': null}}]);
+    _router.navigate(null /* FIXME: [{'outlets': {'popup': null}}]*/);
   }
 }

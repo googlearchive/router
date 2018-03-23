@@ -1,4 +1,4 @@
-<h2>Crises</h2>
+<h2>Crisis Center</h2>
 <ul class="items">
   <li *ngFor="let crisis of crises"
     [class.selected]="crisis === selectedCrisis"
@@ -6,4 +6,4 @@
     <span class="badge">{{crisis.id}}</span> {{crisis.name}}
   </li>
 </ul>
-<router-outlet></router-outlet>
+<router-outlet [routes]="routes.all"></router-outlet>

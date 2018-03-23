@@ -2,12 +2,7 @@
 import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 
-// Not yet used: import 'src/compose_message_component.dart';
-import 'src/crisis_center/crisis_center_component.dart';
-import 'src/heroes/hero_detail_component.dart';
-import 'src/heroes/hero_service.dart';
-import 'src/heroes/heroes_component.dart';
-import 'src/not_found_component.dart';
+import 'src/hero/hero_service.dart';
 
 @Component(
   selector: 'my-app',
@@ -26,21 +21,21 @@ import 'src/not_found_component.dart';
     <router-outlet name="popup"></router-outlet>
     -->
   ''',
-  styles: const ['.router-link-active {color: #039be5;}'],
-  directives: const [routerDirectives],
-  providers: const [HeroService],
+  styles: ['.router-link-active {color: #039be5;}'],
+  directives: [routerDirectives],
+  providers: [HeroService],
 )
 // FIXME: WIP
 //@RouteConfig(const [
-//  const Redirect(path: '/', redirectTo: const ['Heroes']),
+//  const Redirect(path: '/', redirectTo: ['Heroes']),
 //  const Route(
-//      path: '/crisis-center/...',
+//      path: '/crises/...',
 //      name: 'CrisisCenter',
-//      component: CrisisCenterComponent),
-//  const Route(path: '/heroes', name: 'Heroes', component: HeroesComponent),
+//      component: CrisisListComponent),
+//  const Route(path: '/heroes', name: 'Heroes', component: HeroListComponent),
 //  const Route(
-//      path: '/hero/:id', name: 'HeroDetail', component: HeroDetailComponent),
-//  // Not yet used: const AuxRoute(path: '/contact', name: 'Contact', component: ComposeMessageComponent),
+//      path: '/hero/:id', name: 'HeroDetail', component: HeroComponent),
+//  // Not yet used: AuxRoute(path: '/contact', name: 'Contact', component: ComposeMessageComponent),
 //  const Route(path: '/**', name: 'NotFound', component: NotFoundComponent)
 //])
 class AppComponent {}
