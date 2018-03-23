@@ -1,6 +1,6 @@
 import 'package:angular_router/angular_router.dart';
 
-import 'crisis_component_4.template.dart' as cct;
+import 'crisis_component_5.template.dart' as cct;
 import 'crisis_list_home_component.template.dart' as clhct;
 import 'route_paths.dart' as paths;
 

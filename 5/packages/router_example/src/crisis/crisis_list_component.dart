@@ -5,6 +5,7 @@ import 'package:angular_router/angular_router.dart';
 
 import 'crisis.dart';
 import 'crisis_service.dart';
+import 'dialog_service.dart';
 import 'route_paths.dart' as paths;
 import 'routes.dart';
 
@@ -15,6 +16,7 @@ import 'routes.dart';
   directives: [coreDirectives, RouterOutlet],
   providers: [
     const ClassProvider(CrisisService),
+    const ClassProvider(DialogService),
     const ClassProvider(Routes),
   ],
 )
