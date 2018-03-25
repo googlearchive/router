@@ -4,6 +4,7 @@ import 'package:angular/angular.dart';
 import 'package:angular_forms/angular_forms.dart';
 import 'package:angular_router/angular_router.dart';
 
+import 'route_paths.dart' as paths;
 import 'crisis.dart';
 import 'crisis_service.dart';
 import 'dialog_service.dart';
@@ -14,64 +15,68 @@ import 'dialog_service.dart';
   styleUrls: ['crisis_component.css'],
   directives: [coreDirectives, formDirectives],
 )
-class CrisisComponent
-/* implements
+class CrisisComponent // extends Object with CanReuse
+    implements
         CanDeactivate,
-        CanReuse,
         OnActivate,
-        OnDeactivate,
-        OnInit
-        // FIXME: OnReuse
-        */
-{
+        OnDeactivate {
+  static int _instanceCount = 0; // FIXME: temporary
+  final instanceId = _instanceCount++; // FIXME: temporary
   Crisis crisis;
-  String name;
+  // String name; // FIXME: temporarily splitting into getter/setter
+  String _name;
+  void set name(String n) {
+    _name = n;
+    print('>> [$instanceId] Crisis name changed to $_name');
+  }
+
+  String get name => _name;
+
   final CrisisService _crisisService;
   final Router _router;
-  // final RouteParams _routeParams;
   final DialogService _dialogService;
 
-  CrisisComponent(this._crisisService, this._router, this._dialogService);
+  CrisisComponent(this._crisisService, this._router, this._dialogService) {
+    print('[$instanceId] CrisisComponent created');
+  }
 
-  Future<void> ngOnInit() =>
-      _setCrisis(null /* FIXME: _routeParams.get('id')*/);
+  int _getId(RouterState routerState) => int
+      .parse(routerState.parameters[paths.idParam] ?? '', onError: (_) => null);
 
-  Future<void> _setCrisis(String idAsString) async {
-    var id = int.parse(idAsString ?? '', onError: (_) => null);
-    if (id != null) crisis = await (_crisisService.get(id));
-    if (crisis != null) name = crisis.name;
+  @override
+  Future<void> onActivate(_, RouterState current) async {
+    print(
+        '>> [$instanceId] Crisis onActivate ${_?.toUrl()} ($name) -> ${current?.toUrl()} ...');
+    final id = _getId(current);
+    if (id == null) return null;
+    crisis = await (_crisisService.get(id));
+    name = crisis?.name;
+    print('>> [$instanceId] Crisis onActivate name = $name');
+  }
+
+  @override
+  void onDeactivate(RouterState prev, RouterState current) {
+    print(
+        '>> [$instanceId] Crisis onDeactivate ${prev?.toUrl()} ($name) -> ${current?.toUrl()}');
   }
 
   Future<void> save() async {
-    crisis.name = name;
+    print('>> [$instanceId] Crisis save $name (was ${crisis?.name}');
+    crisis?.name = name;
     goBack();
   }
 
-  Future goBack() => _router.navigate(
-      null /* FIXME: [
-        'CrisesHome',
-        crisis == null ? {} : {'id': crisis.id.toString()}
-      ]*/
-      );
+  Future<NavigationResult> goBack() => _router.navigate(paths.home.toUrl());
 
-  // TODO: remove cast of true once there is a fix for https://github.com/dart-lang/sdk/issues/25368
-  FutureOr<bool> routerCanDeactivate(next, prev) =>
-      crisis == null || crisis.name == name
-          ? true as FutureOr<bool>
-          : _dialogService.confirm('Discard changes?');
+  @override
+  Future<bool> canDeactivate(RouterState prev, RouterState next) async {
+    print(
+        '>> [$instanceId] Crisis canDeactivate ${prev?.toUrl()} -> ${next?.toUrl()}; ${crisis?.name} == $name');
+    return crisis == null || crisis?.name == name
+        ? true
+        : _dialogService.confirm('Discard changes?');
+  }
 
-  FutureOr<bool> routerCanReuse(next, prev) => true;
-
-  // FIXME:
   //  @override
-  //  Future<void> routerOnReuse(ComponentInstruction next, prev) =>
-  //      _setCrisis(next.params['id']);
-
-  void routerOnActivate(next, prev) {
-    print('Activating ${next.routeName} ${next.urlPath}');
-  }
-
-  void routerOnDeactivate(next, prev) {
-    print('Deactivating ${prev.routeName} ${prev.urlPath}');
-  }
+  //  Future<bool> canReuse(_, __) async => true;
 }
