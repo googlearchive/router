@@ -124,7 +124,7 @@ class _ViewHeroListComponent1 extends AppView<import2.HeroListComponent> {
   void detectChangesInternal() {
     final import2.HeroListComponent _ctx = ctx;
     final import12.Hero local_hero = locals['\$implicit'];
-    final currVal_0 = identical(local_hero, _ctx.selectedHero);
+    final currVal_0 = identical(local_hero, _ctx.selected);
     if (!identical(_expr_0, currVal_0)) {
       updateClass(_el_0, 'selected', currVal_0);
       _expr_0 = currVal_0;

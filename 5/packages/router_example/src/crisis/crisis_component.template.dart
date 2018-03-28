@@ -9,18 +9,20 @@ import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:angular_forms/angular_forms.dart';
 import 'package:angular_router/angular_router.dart';
-import 'route_paths.dart' as paths;
+import '../instance_logger.dart';
 import 'crisis.dart';
 import 'crisis_service.dart';
 import 'dialog_service.dart';
+import 'route_paths.dart' as paths;
 import 'package:angular/src/di/reflector.dart' as _ngRef;
-import 'crisis.template.dart' as _ref0;
-import 'crisis_service.template.dart' as _ref1;
-import 'dialog_service.template.dart' as _ref2;
-import 'package:angular/angular.template.dart' as _ref3;
-import 'package:angular_forms/angular_forms.template.dart' as _ref4;
-import 'package:angular_router/angular_router.template.dart' as _ref5;
-import 'route_paths.template.dart' as _ref6;
+import '../instance_logger.template.dart' as _ref0;
+import 'crisis.template.dart' as _ref1;
+import 'crisis_service.template.dart' as _ref2;
+import 'dialog_service.template.dart' as _ref3;
+import 'package:angular/angular.template.dart' as _ref4;
+import 'package:angular_forms/angular_forms.template.dart' as _ref5;
+import 'package:angular_router/angular_router.template.dart' as _ref6;
+import 'route_paths.template.dart' as _ref7;
 import 'package:router_example/src/crisis/crisis_component.css.shim.dart' as import0;
 import 'package:angular/src/core/linker/app_view.dart';
 import 'crisis_component.dart' as import2;
@@ -88,18 +90,17 @@ class _ViewCrisisComponent1 extends AppView<import2.CrisisComponent> {
   import8.DivElement _el_0;
   import8.Element _el_1;
   import8.Text _text_2;
-  import8.Text _text_4;
-  import8.DivElement _el_6;
-  import8.Element _el_7;
-  import8.Text _text_9;
-  import8.DivElement _el_10;
-  import8.Element _el_11;
-  import8.InputElement _el_13;
-  import12.DefaultValueAccessor _DefaultValueAccessor_13_5;
-  List<import13.ControlValueAccessor<dynamic>> _NgValueAccessor_13_6;
-  import14.NgModel _NgModel_13_7;
+  import8.DivElement _el_3;
+  import8.Element _el_4;
+  import8.Text _text_6;
+  import8.DivElement _el_7;
+  import8.Element _el_8;
+  import8.InputElement _el_10;
+  import12.DefaultValueAccessor _DefaultValueAccessor_10_5;
+  List<import13.ControlValueAccessor<dynamic>> _NgValueAccessor_10_6;
+  import14.NgModel _NgModel_10_7;
+  import8.ButtonElement _el_11;
   import8.ButtonElement _el_14;
-  import8.ButtonElement _el_17;
   var _expr_0;
   var _expr_1;
   _ViewCrisisComponent1(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.EMBEDDED, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
@@ -114,61 +115,55 @@ class _ViewCrisisComponent1 extends AppView<import2.CrisisComponent> {
     addShimE(_el_1);
     _text_2 = new import8.Text('');
     _el_1.append(_text_2);
-    import8.Text _text_3 = new import8.Text(' details! (');
-    _el_1.append(_text_3);
-    _text_4 = new import8.Text(import9.interpolate0(ctx.instanceId));
-    _el_1.append(_text_4);
-    import8.Text _text_5 = new import8.Text(')');
-    _el_1.append(_text_5);
-    _el_6 = createDivAndAppend(doc, _el_0);
-    addShimC(_el_6);
-    _el_7 = createAndAppend(doc, 'label', _el_6);
-    addShimE(_el_7);
-    import8.Text _text_8 = new import8.Text('id:');
-    _el_7.append(_text_8);
-    _text_9 = new import8.Text('');
-    _el_6.append(_text_9);
-    _el_10 = createDivAndAppend(doc, _el_0);
+    _el_3 = createDivAndAppend(doc, _el_0);
+    addShimC(_el_3);
+    _el_4 = createAndAppend(doc, 'label', _el_3);
+    addShimE(_el_4);
+    import8.Text _text_5 = new import8.Text('id:');
+    _el_4.append(_text_5);
+    _text_6 = new import8.Text('');
+    _el_3.append(_text_6);
+    _el_7 = createDivAndAppend(doc, _el_0);
+    addShimC(_el_7);
+    _el_8 = createAndAppend(doc, 'label', _el_7);
+    addShimE(_el_8);
+    import8.Text _text_9 = new import8.Text('name:');
+    _el_8.append(_text_9);
+    _el_10 = createAndAppend(doc, 'input', _el_7);
+    createAttr(_el_10, 'placeholder', 'name');
     addShimC(_el_10);
-    _el_11 = createAndAppend(doc, 'label', _el_10);
-    addShimE(_el_11);
-    import8.Text _text_12 = new import8.Text('name:');
+    _DefaultValueAccessor_10_5 = new import12.DefaultValueAccessor(_el_10);
+    _NgValueAccessor_10_6 = [_DefaultValueAccessor_10_5];
+    _NgModel_10_7 = new import14.NgModel(null, _NgValueAccessor_10_6);
+    _el_11 = createAndAppend(doc, 'button', _el_0);
+    addShimC(_el_11);
+    import8.Text _text_12 = new import8.Text('Cancel');
     _el_11.append(_text_12);
-    _el_13 = createAndAppend(doc, 'input', _el_10);
-    createAttr(_el_13, 'placeholder', 'name');
-    addShimC(_el_13);
-    _DefaultValueAccessor_13_5 = new import12.DefaultValueAccessor(_el_13);
-    _NgValueAccessor_13_6 = [_DefaultValueAccessor_13_5];
-    _NgModel_13_7 = new import14.NgModel(null, _NgValueAccessor_13_6);
+    import8.Text _text_13 = new import8.Text(' \n  ');
+    _el_0.append(_text_13);
     _el_14 = createAndAppend(doc, 'button', _el_0);
     addShimC(_el_14);
-    import8.Text _text_15 = new import8.Text('Cancel');
+    import8.Text _text_15 = new import8.Text('Save');
     _el_14.append(_text_15);
-    import8.Text _text_16 = new import8.Text(' \n  ');
-    _el_0.append(_text_16);
-    _el_17 = createAndAppend(doc, 'button', _el_0);
-    addShimC(_el_17);
-    import8.Text _text_18 = new import8.Text('Save');
-    _el_17.append(_text_18);
-    _el_13.addEventListener('input', eventHandler1(_handle_input_13_1));
-    _el_13.addEventListener('blur', eventHandler0(_DefaultValueAccessor_13_5.touchHandler));
-    final subscription_0 = _NgModel_13_7.update.listen(eventHandler1(_handle_ngModelChange_13_0));
-    _el_14.addEventListener('click', eventHandler0(ctx.goBack));
-    _el_17.addEventListener('click', eventHandler0(ctx.save));
+    _el_10.addEventListener('input', eventHandler1(_handle_input_10_1));
+    _el_10.addEventListener('blur', eventHandler0(_DefaultValueAccessor_10_5.touchHandler));
+    final subscription_0 = _NgModel_10_7.update.listen(eventHandler1(_handle_ngModelChange_10_0));
+    _el_11.addEventListener('click', eventHandler0(ctx.goBack));
+    _el_14.addEventListener('click', eventHandler0(ctx.save));
     init([_el_0], [subscription_0]);
     return null;
   }
 
   @override
   dynamic injectorGetInternal(dynamic token, int nodeIndex, dynamic notFoundResult) {
-    if ((identical(token, import12.DefaultValueAccessor) && (13 == nodeIndex))) {
-      return _DefaultValueAccessor_13_5;
+    if ((identical(token, import12.DefaultValueAccessor) && (10 == nodeIndex))) {
+      return _DefaultValueAccessor_10_5;
     }
-    if ((identical(token, const import15.MultiToken<import16.ControlValueAccessor>('NgValueAccessor')) && (13 == nodeIndex))) {
-      return _NgValueAccessor_13_6;
+    if ((identical(token, const import15.MultiToken<import16.ControlValueAccessor>('NgValueAccessor')) && (10 == nodeIndex))) {
+      return _NgValueAccessor_10_6;
     }
-    if (((identical(token, import14.NgModel) || identical(token, import17.NgControl)) && (13 == nodeIndex))) {
-      return _NgModel_13_7;
+    if (((identical(token, import14.NgModel) || identical(token, import17.NgControl)) && (10 == nodeIndex))) {
+      return _NgModel_10_7;
     }
     return notFoundResult;
   }
@@ -179,10 +174,10 @@ class _ViewCrisisComponent1 extends AppView<import2.CrisisComponent> {
     bool changed = false;
     bool firstCheck = (this.cdState == 0);
     changed = false;
-    _NgModel_13_7.model = _ctx.name;
-    _NgModel_13_7.ngAfterChanges();
+    _NgModel_10_7.model = _ctx.name;
+    _NgModel_10_7.ngAfterChanges();
     if (firstCheck) {
-      _NgModel_13_7.ngOnInit();
+      _NgModel_10_7.ngOnInit();
     }
     final currVal_0 = import9.interpolate0(_ctx.crisis.name);
     if (!identical(_expr_0, currVal_0)) {
@@ -191,17 +186,17 @@ class _ViewCrisisComponent1 extends AppView<import2.CrisisComponent> {
     }
     final currVal_1 = import9.interpolate0(_ctx.crisis.id);
     if (!identical(_expr_1, currVal_1)) {
-      _text_9.text = currVal_1;
+      _text_6.text = currVal_1;
       _expr_1 = currVal_1;
     }
   }
 
-  void _handle_ngModelChange_13_0($event) {
+  void _handle_ngModelChange_10_0($event) {
     ctx.name = $event;
   }
 
-  void _handle_input_13_1($event) {
-    _DefaultValueAccessor_13_5.onChange($event.target.value);
+  void _handle_input_10_1($event) {
+    _DefaultValueAccessor_10_5.onChange($event.target.value);
   }
 }
 
@@ -257,4 +252,5 @@ void initReflector() {
   _ref4.initReflector();
   _ref5.initReflector();
   _ref6.initReflector();
+  _ref7.initReflector();
 }

@@ -8,19 +8,21 @@ export 'crisis_list_component.dart';
 import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
+import '../instance_logger.dart';
 import 'crisis.dart';
 import 'crisis_service.dart';
 import 'dialog_service.dart';
 import 'route_paths.dart' as paths;
 import 'routes.dart';
 import 'package:angular/src/di/reflector.dart' as _ngRef;
-import 'crisis.template.dart' as _ref0;
-import 'crisis_service.template.dart' as _ref1;
-import 'dialog_service.template.dart' as _ref2;
-import 'package:angular/angular.template.dart' as _ref3;
-import 'package:angular_router/angular_router.template.dart' as _ref4;
-import 'route_paths.template.dart' as _ref5;
-import 'routes.template.dart' as _ref6;
+import '../instance_logger.template.dart' as _ref0;
+import 'crisis.template.dart' as _ref1;
+import 'crisis_service.template.dart' as _ref2;
+import 'dialog_service.template.dart' as _ref3;
+import 'package:angular/angular.template.dart' as _ref4;
+import 'package:angular_router/angular_router.template.dart' as _ref5;
+import 'route_paths.template.dart' as _ref6;
+import 'routes.template.dart' as _ref7;
 import 'package:router_example/src/crisis/crisis_list_component.css.shim.dart' as import0;
 import 'package:angular/src/core/linker/app_view.dart';
 import 'crisis_list_component.dart' as import2;
@@ -46,13 +48,12 @@ const List<dynamic> styles$CrisisListComponent = const [import0.styles];
 
 class ViewCrisisListComponent0 extends AppView<import2.CrisisListComponent> {
   import3.Element _el_0;
-  import3.Text _text_2;
-  import3.UListElement _el_4;
-  ViewContainer _appEl_5;
-  import5.NgFor _NgFor_5_9;
-  import3.Element _el_6;
-  ViewContainer _appEl_6;
-  import6.RouterOutlet _RouterOutlet_6_8;
+  import3.UListElement _el_2;
+  ViewContainer _appEl_3;
+  import5.NgFor _NgFor_3_9;
+  import3.Element _el_4;
+  ViewContainer _appEl_4;
+  import6.RouterOutlet _RouterOutlet_4_8;
   var _expr_0;
   var _expr_1;
   static RenderComponentType _renderType;
@@ -68,24 +69,20 @@ class ViewCrisisListComponent0 extends AppView<import2.CrisisListComponent> {
     var doc = import3.document;
     _el_0 = createAndAppend(doc, 'h2', parentRenderNode);
     addShimE(_el_0);
-    import3.Text _text_1 = new import3.Text('Crisis Center (');
+    import3.Text _text_1 = new import3.Text('Crisis Center');
     _el_0.append(_text_1);
-    _text_2 = new import3.Text(import10.interpolate0(ctx.instanceId));
-    _el_0.append(_text_2);
-    import3.Text _text_3 = new import3.Text(')');
-    _el_0.append(_text_3);
-    _el_4 = createAndAppend(doc, 'ul', parentRenderNode);
-    _el_4.className = 'items';
-    addShimC(_el_4);
-    var _anchor_5 = ngAnchor.clone(false);
-    _el_4.append(_anchor_5);
-    _appEl_5 = new ViewContainer(5, 4, this, _anchor_5);
-    TemplateRef _TemplateRef_5_8 = new TemplateRef(_appEl_5, viewFactory_CrisisListComponent1);
-    _NgFor_5_9 = new import5.NgFor(_appEl_5, _TemplateRef_5_8);
-    _el_6 = createAndAppend(doc, 'router-outlet', parentRenderNode);
-    addShimE(_el_6);
-    _appEl_6 = new ViewContainer(6, null, this, _el_6);
-    _RouterOutlet_6_8 = new import6.RouterOutlet(parentView.injectorGet(import13.RouterOutletToken, viewData.parentIndex, null), _appEl_6, parentView.injectorGet(import14.Router, viewData.parentIndex), parentView.injectorGet(import15.RouterHook, viewData.parentIndex, null));
+    _el_2 = createAndAppend(doc, 'ul', parentRenderNode);
+    _el_2.className = 'items';
+    addShimC(_el_2);
+    var _anchor_3 = ngAnchor.clone(false);
+    _el_2.append(_anchor_3);
+    _appEl_3 = new ViewContainer(3, 2, this, _anchor_3);
+    TemplateRef _TemplateRef_3_8 = new TemplateRef(_appEl_3, viewFactory_CrisisListComponent1);
+    _NgFor_3_9 = new import5.NgFor(_appEl_3, _TemplateRef_3_8);
+    _el_4 = createAndAppend(doc, 'router-outlet', parentRenderNode);
+    addShimE(_el_4);
+    _appEl_4 = new ViewContainer(4, null, this, _el_4);
+    _RouterOutlet_4_8 = new import6.RouterOutlet(parentView.injectorGet(import13.RouterOutletToken, viewData.parentIndex, null), _appEl_4, parentView.injectorGet(import14.Router, viewData.parentIndex), parentView.injectorGet(import15.RouterHook, viewData.parentIndex, null));
     init(const [], null);
     return null;
   }
@@ -96,27 +93,27 @@ class ViewCrisisListComponent0 extends AppView<import2.CrisisListComponent> {
     bool firstCheck = (this.cdState == 0);
     final currVal_0 = _ctx.crises;
     if (!identical(_expr_0, currVal_0)) {
-      _NgFor_5_9.ngForOf = currVal_0;
+      _NgFor_3_9.ngForOf = currVal_0;
       _expr_0 = currVal_0;
     }
-    _NgFor_5_9.ngDoCheck();
+    _NgFor_3_9.ngDoCheck();
     final currVal_1 = _ctx.routes.all;
     if (!identical(_expr_1, currVal_1)) {
-      _RouterOutlet_6_8.routes = currVal_1;
+      _RouterOutlet_4_8.routes = currVal_1;
       _expr_1 = currVal_1;
     }
     if (firstCheck) {
-      _RouterOutlet_6_8.ngOnInit();
+      _RouterOutlet_4_8.ngOnInit();
     }
-    _appEl_5.detectChangesInNestedViews();
-    _appEl_6.detectChangesInNestedViews();
+    _appEl_3.detectChangesInNestedViews();
+    _appEl_4.detectChangesInNestedViews();
   }
 
   @override
   void destroyInternal() {
-    _appEl_5?.destroyNestedViews();
-    _appEl_6?.destroyNestedViews();
-    _RouterOutlet_6_8.ngOnDestroy();
+    _appEl_3?.destroyNestedViews();
+    _appEl_4?.destroyNestedViews();
+    _RouterOutlet_4_8.ngOnDestroy();
   }
 }
 
@@ -158,7 +155,7 @@ class _ViewCrisisListComponent1 extends AppView<import2.CrisisListComponent> {
   void detectChangesInternal() {
     final import2.CrisisListComponent _ctx = ctx;
     final import16.Crisis local_crisis = locals['\$implicit'];
-    final currVal_0 = identical(local_crisis, _ctx.selectedCrisis);
+    final currVal_0 = identical(local_crisis, _ctx.selected);
     if (!identical(_expr_0, currVal_0)) {
       updateClass(_el_0, 'selected', currVal_0);
       _expr_0 = currVal_0;
@@ -259,4 +256,5 @@ void initReflector() {
   _ref4.initReflector();
   _ref5.initReflector();
   _ref6.initReflector();
+  _ref7.initReflector();
 }

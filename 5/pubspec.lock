@@ -39,9 +39,11 @@ packages:
   angular_router:
     dependency: "direct main"
     description:
-      name: angular_router
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: angular_router
+      ref: HEAD
+      resolved-ref: "4b69a091a707400cfd12842076d184e18b88e3b9"
+      url: "https://github.com/dart-lang/angular.git"
+    source: git
     version: "2.0.0-alpha+8"
   archive:
     dependency: transitive
@@ -504,7 +506,7 @@ packages:
       name: stream_transform
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.10"
+    version: "0.0.11"
   string_scanner:
     dependency: transitive
     description:
@@ -525,7 +527,7 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.32+2"
+    version: "0.12.33"
   tuple:
     dependency: transitive
     description:
@@ -569,4 +571,4 @@ packages:
     source: hosted
     version: "2.1.13"
 sdks:
-  dart: ">=2.0.0-dev.37 <=2.0.0-dev.42.0"
+  dart: ">=2.0.0-dev.37 <=2.0.0-dev.43.0"

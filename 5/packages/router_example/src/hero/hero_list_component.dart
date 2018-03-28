@@ -17,7 +17,7 @@ class HeroListComponent implements OnActivate {
   final HeroService _heroService;
   final Router _router;
   List<Hero> heroes;
-  Hero selectedHero;
+  Hero selected;
 
   HeroListComponent(this._heroService, this._router);
 
@@ -28,25 +28,25 @@ class HeroListComponent implements OnActivate {
   @override
   Future<void> onActivate(_, RouterState current) async {
     await _getHeroes();
-    await _selectHero(current);
+    selected = _select(current);
   }
 
-  Future<void> _selectHero(RouterState routerState) async {
-    var id = _getId(routerState);
-    if (id != null)
-      selectedHero =
-          heroes.firstWhere((hero) => hero.id == id, orElse: () => null);
+  Hero _select(RouterState routerState) {
+    final id = _getId(routerState);
+    return id == null
+        ? null
+        : heroes.firstWhere((e) => e.id == id, orElse: () => null);
   }
 
   int _getId(RouterState routerState) =>
       int.parse(routerState.queryParameters[paths.idParam] ?? '',
           onError: (_) => null);
 
-  void onSelect(Hero hero) {
-    selectedHero = hero;
-    gotoDetail();
-  }
+  void onSelect(Hero hero) => _gotoDetail(hero.id);
 
-  Future<NavigationResult> gotoDetail() => _router.navigate(paths.hero
-      .toUrl(parameters: {paths.idParam: selectedHero.id.toString()}));
+  String _heroUrl(int id) =>
+      paths.hero.toUrl(parameters: {paths.idParam: id.toString()});
+
+  Future<NavigationResult> _gotoDetail(int id) =>
+      _router.navigate(_heroUrl(id));
 }
