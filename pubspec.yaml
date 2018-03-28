@@ -14,3 +14,10 @@ dev_dependencies:
   build_runner: ^0.8.0
   build_test: ^0.10.0
   build_web_compilers: ^0.3.0
+
+# Use override until the fix lands for [Wrong route component instance gets deactivation notice](https://github.com/dart-lang/angular/issues/1134)
+dependency_overrides:
+  angular_router:
+     git:
+       url: https://github.com/dart-lang/angular.git
+       path: angular_router
