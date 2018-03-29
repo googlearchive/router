@@ -41,7 +41,7 @@ packages:
     description:
       path: angular_router
       ref: HEAD
-      resolved-ref: "4b69a091a707400cfd12842076d184e18b88e3b9"
+      resolved-ref: "52527ce6944b5cf137b12f94810705d786d805f9"
       url: "https://github.com/dart-lang/angular.git"
     source: git
     version: "2.0.0-alpha+8"
@@ -128,7 +128,7 @@ packages:
       name: build_runner
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.8.0"
+    version: "0.8.1"
   build_test:
     dependency: "direct dev"
     description:
@@ -156,7 +156,7 @@ packages:
       name: built_value
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.2.2"
+    version: "5.4.1"
   charcode:
     dependency: transitive
     description:
