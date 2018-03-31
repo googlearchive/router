@@ -14,37 +14,35 @@ packages:
       name: angular
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.0-alpha+8"
+    version: "5.0.0-alpha+9"
   angular_ast:
     dependency: transitive
     description:
       name: angular_ast
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.4"
+    version: "0.5.0"
   angular_compiler:
     dependency: transitive
     description:
       name: angular_compiler
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.0-alpha+8"
+    version: "0.4.0-alpha+9"
   angular_forms:
     dependency: "direct main"
     description:
       name: angular_forms
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0-alpha"
+    version: "2.0.0-alpha+1"
   angular_router:
     dependency: "direct main"
     description:
-      path: angular_router
-      ref: HEAD
-      resolved-ref: "52527ce6944b5cf137b12f94810705d786d805f9"
-      url: "https://github.com/dart-lang/angular.git"
-    source: git
-    version: "2.0.0-alpha+8"
+      name: angular_router
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0-alpha+9"
   archive:
     dependency: transitive
     description:
@@ -142,7 +140,7 @@ packages:
       name: build_web_compilers
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.4+2"
+    version: "0.3.5"
   built_collection:
     dependency: transitive
     description:
@@ -408,7 +406,7 @@ packages:
       name: pub_semver
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.3.2"
+    version: "1.3.3"
   quiver:
     dependency: transitive
     description:
@@ -464,7 +462,7 @@ packages:
       name: source_gen
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.7.6"
+    version: "0.8.0"
   source_map_stack_trace:
     dependency: transitive
     description:
