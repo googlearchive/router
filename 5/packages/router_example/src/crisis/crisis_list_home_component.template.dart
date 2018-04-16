@@ -22,7 +22,7 @@ const List<dynamic> styles$CrisisListHomeComponent = const [];
 class ViewCrisisListHomeComponent0 extends AppView<import1.CrisisListHomeComponent> {
   import2.Element _el_0;
   static RenderComponentType _renderType;
-  ViewCrisisListHomeComponent0(AppView<dynamic> parentView, int parentIndex) : super(import4.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  ViewCrisisListHomeComponent0(AppView<dynamic> parentView, int parentIndex) : super(import4.ViewType.component, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     rootEl = import2.document.createElement('crises-home');
     _renderType ??= import6.appViewUtils.createRenderType('', ViewEncapsulation.None, styles$CrisisListHomeComponent);
     setupComponentType(_renderType);
@@ -49,7 +49,7 @@ const List<dynamic> styles$CrisisListHomeComponentHost = const [];
 class _ViewCrisisListHomeComponentHost0 extends AppView<dynamic> {
   ViewCrisisListHomeComponent0 _compView_0;
   import1.CrisisListHomeComponent _CrisisListHomeComponent_0_5;
-  _ViewCrisisListHomeComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import4.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
+  _ViewCrisisListHomeComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import4.ViewType.host, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
   @override
   ComponentRef build() {
     _compView_0 = new ViewCrisisListHomeComponent0(this, 0);

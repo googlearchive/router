@@ -22,7 +22,7 @@ const List<dynamic> styles$NotFoundComponent = const [];
 class ViewNotFoundComponent0 extends AppView<import1.NotFoundComponent> {
   import2.Element _el_0;
   static RenderComponentType _renderType;
-  ViewNotFoundComponent0(AppView<dynamic> parentView, int parentIndex) : super(import4.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  ViewNotFoundComponent0(AppView<dynamic> parentView, int parentIndex) : super(import4.ViewType.component, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     rootEl = import2.document.createElement('my-not-found');
     _renderType ??= import6.appViewUtils.createRenderType('', ViewEncapsulation.None, styles$NotFoundComponent);
     setupComponentType(_renderType);
@@ -49,7 +49,7 @@ const List<dynamic> styles$NotFoundComponentHost = const [];
 class _ViewNotFoundComponentHost0 extends AppView<dynamic> {
   ViewNotFoundComponent0 _compView_0;
   import1.NotFoundComponent _NotFoundComponent_0_5;
-  _ViewNotFoundComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import4.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
+  _ViewNotFoundComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import4.ViewType.host, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
   @override
   ComponentRef build() {
     _compView_0 = new ViewNotFoundComponent0(this, 0);

@@ -51,7 +51,7 @@ class ViewCrisisComponent0 extends AppView<import2.CrisisComponent> {
   ViewContainer _appEl_0;
   NgIf _NgIf_0_9;
   static RenderComponentType _renderType;
-  ViewCrisisComponent0(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  ViewCrisisComponent0(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.component, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     rootEl = import8.document.createElement('my-crisis');
     _renderType ??= import9.appViewUtils.createRenderType('', ViewEncapsulation.Emulated, styles$CrisisComponent);
     setupComponentType(_renderType);
@@ -60,7 +60,7 @@ class ViewCrisisComponent0 extends AppView<import2.CrisisComponent> {
   ComponentRef<import2.CrisisComponent> build() {
     final _rootEl = rootEl;
     final import8.HtmlElement parentRenderNode = initViewRoot(_rootEl);
-    var _anchor_0 = ngAnchor.clone(false);
+    final _anchor_0 = createViewContainerAnchor();
     parentRenderNode.append(_anchor_0);
     _appEl_0 = new ViewContainer(0, null, this, _anchor_0);
     TemplateRef _TemplateRef_0_8 = new TemplateRef(_appEl_0, viewFactory_CrisisComponent1);
@@ -103,7 +103,7 @@ class _ViewCrisisComponent1 extends AppView<import2.CrisisComponent> {
   import8.ButtonElement _el_14;
   var _expr_0;
   var _expr_1;
-  _ViewCrisisComponent1(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.EMBEDDED, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  _ViewCrisisComponent1(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.embedded, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     componentType = ViewCrisisComponent0._renderType;
   }
   @override
@@ -145,8 +145,8 @@ class _ViewCrisisComponent1 extends AppView<import2.CrisisComponent> {
     addShimC(_el_14);
     import8.Text _text_15 = new import8.Text('Save');
     _el_14.append(_text_15);
-    _el_10.addEventListener('input', eventHandler1(_handle_input_10_1));
     _el_10.addEventListener('blur', eventHandler0(_DefaultValueAccessor_10_5.touchHandler));
+    _el_10.addEventListener('input', eventHandler1(_handle_input_10_2));
     final subscription_0 = _NgModel_10_7.update.listen(eventHandler1(_handle_ngModelChange_10_0));
     _el_11.addEventListener('click', eventHandler0(ctx.goBack));
     _el_14.addEventListener('click', eventHandler0(ctx.save));
@@ -195,8 +195,8 @@ class _ViewCrisisComponent1 extends AppView<import2.CrisisComponent> {
     ctx.name = $event;
   }
 
-  void _handle_input_10_1($event) {
-    _DefaultValueAccessor_10_5.onChange($event.target.value);
+  void _handle_input_10_2($event) {
+    _DefaultValueAccessor_10_5.handleChange($event.target.value);
   }
 }
 
@@ -209,7 +209,7 @@ const List<dynamic> styles$CrisisComponentHost = const [];
 class _ViewCrisisComponentHost0 extends AppView<dynamic> {
   ViewCrisisComponent0 _compView_0;
   import2.CrisisComponent _CrisisComponent_0_5;
-  _ViewCrisisComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
+  _ViewCrisisComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.host, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
   @override
   ComponentRef build() {
     _compView_0 = new ViewCrisisComponent0(this, 0);

@@ -52,14 +52,11 @@ class CrisisListComponent extends Object
   }
 
   Crisis _selectHero(RouterState routerState) {
-    final id = _getId(routerState);
+    final id = paths.getId(routerState.parameters);
     return id == null
         ? null
         : crises.firstWhere((e) => e.id == id, orElse: () => null);
   }
-
-  int _getId(RouterState routerState) => int
-      .parse(routerState.parameters[paths.idParam] ?? '', onError: (_) => null);
 
   void onSelect(Crisis crisis) async {
     log('onSelect requested for id = ${crisis?.id}');

@@ -57,7 +57,7 @@ class ViewCrisisListComponent0 extends AppView<import2.CrisisListComponent> {
   var _expr_0;
   var _expr_1;
   static RenderComponentType _renderType;
-  ViewCrisisListComponent0(AppView<dynamic> parentView, int parentIndex) : super(import8.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  ViewCrisisListComponent0(AppView<dynamic> parentView, int parentIndex) : super(import8.ViewType.component, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     rootEl = import3.document.createElement('my-crises');
     _renderType ??= import10.appViewUtils.createRenderType('', ViewEncapsulation.Emulated, styles$CrisisListComponent);
     setupComponentType(_renderType);
@@ -74,7 +74,7 @@ class ViewCrisisListComponent0 extends AppView<import2.CrisisListComponent> {
     _el_2 = createAndAppend(doc, 'ul', parentRenderNode);
     _el_2.className = 'items';
     addShimC(_el_2);
-    var _anchor_3 = ngAnchor.clone(false);
+    final _anchor_3 = createViewContainerAnchor();
     _el_2.append(_anchor_3);
     _appEl_3 = new ViewContainer(3, 2, this, _anchor_3);
     TemplateRef _TemplateRef_3_8 = new TemplateRef(_appEl_3, viewFactory_CrisisListComponent1);
@@ -129,7 +129,7 @@ class _ViewCrisisListComponent1 extends AppView<import2.CrisisListComponent> {
   bool _expr_0;
   var _expr_1;
   var _expr_2;
-  _ViewCrisisListComponent1(AppView<dynamic> parentView, int parentIndex) : super(import8.ViewType.EMBEDDED, {'\$implicit': null}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  _ViewCrisisListComponent1(AppView<dynamic> parentView, int parentIndex) : super(import8.ViewType.embedded, {'\$implicit': null}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     componentType = ViewCrisisListComponent0._renderType;
   }
   @override
@@ -190,7 +190,7 @@ class _ViewCrisisListComponentHost0 extends AppView<dynamic> {
   import18.Routes _Routes_0_6;
   import2.CrisisListComponent _CrisisListComponent_0_7;
   import19.DialogService __DialogService_0_8;
-  _ViewCrisisListComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import8.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
+  _ViewCrisisListComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import8.ViewType.host, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
   import19.DialogService get _DialogService_0_8 {
     if ((this.__DialogService_0_8 == null)) {
       (__DialogService_0_8 = new import19.DialogService());

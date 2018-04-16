@@ -18,7 +18,7 @@ import 'route_paths.dart' as paths;
 )
 class CrisisComponent extends Object
     with CanReuse, InstanceLogger
-    implements CanDeactivate, OnActivate, OnDeactivate {
+    implements CanDeactivate, CanNavigate, OnActivate, OnDeactivate {
   Crisis crisis;
   String name;
   final CrisisService _crisisService;
@@ -33,7 +33,7 @@ class CrisisComponent extends Object
   @override
   Future<void> onActivate(_, RouterState current) async {
     log('onActivate: ${_?.toUrl()} -> ${current?.toUrl()}');
-    final id = _getId(current);
+    final id = paths.getId(current.parameters);
     if (id == null) return null;
     crisis = await (_crisisService.get(id));
     name = crisis?.name;
@@ -45,9 +45,6 @@ class CrisisComponent extends Object
     log('onDeactivate: ${current?.toUrl()} -> ${_?.toUrl()}');
   }
 
-  int _getId(RouterState routerState) => int
-      .parse(routerState.parameters[paths.idParam] ?? '', onError: (_) => null);
-
   Future<void> save() async {
     log('save: $name (was ${crisis?.name}');
     crisis?.name = name;
@@ -57,10 +54,16 @@ class CrisisComponent extends Object
   Future<NavigationResult> goBack() => _router.navigate(paths.home.toUrl());
 
   @override
-  Future<bool> canDeactivate(RouterState prev, RouterState next) async {
-    log('canDeactivate: ${prev?.toUrl()} -> ${next?.toUrl()}; ${crisis?.name} == $name?');
-    return crisis == null || crisis?.name == name
-        ? true
-        : _dialogService.confirm('Discard changes?');
+  Future<bool> canNavigate() async {
+    log('canNavigate: ${crisis?.name} == $name?');
+    return crisis?.name == name ||
+        await _dialogService.confirm('Discard changes?');
+  }
+
+  @override
+  // For illustration purposes only; this method is not used in the component.
+  Future<bool> canDeactivate(RouterState current, RouterState next) async {
+    log('canDeactivate: ${current?.toUrl()} -> ${next?.toUrl()}');
+    return true;
   }
 }
