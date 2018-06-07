@@ -5,23 +5,18 @@ import 'crisis_list_home_component.template.dart' as clhct;
 import 'route_paths.dart' as paths;
 
 class Routes {
-  static final _crisis = new RouteDefinition(
-    routePath: paths.crisis,
-    component: cct.CrisisComponentNgFactory,
-  );
-
-  final crisis = _crisis;
-
-  static final _home = new RouteDefinition(
-    routePath: paths.home,
-    component: clhct.CrisisListHomeComponentNgFactory,
-    useAsDefault: true,
-  );
-
-  final home = _home;
+  RoutePath get crisis => paths.crisis;
+  RoutePath get home => paths.home;
 
   final List<RouteDefinition> all = [
-    _crisis,
-    _home,
+    new RouteDefinition(
+      routePath: paths.crisis,
+      component: cct.CrisisComponentNgFactory,
+    ),
+    new RouteDefinition(
+      routePath: paths.home,
+      component: clhct.CrisisListHomeComponentNgFactory,
+      useAsDefault: true,
+    ),
   ];
 }
