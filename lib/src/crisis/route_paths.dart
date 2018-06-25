@@ -4,12 +4,12 @@ import '../route_paths.dart';
 
 export '../route_paths.dart' show idParam, getId;
 
-final crisis = new RoutePath(
+final crisis = RoutePath(
   path: ':$idParam',
   parent: crises,
 );
 
-final home = new RoutePath(
+final home = RoutePath(
   path: '',
   parent: crises,
   useAsDefault: true,

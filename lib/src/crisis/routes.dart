@@ -9,11 +9,11 @@ class Routes {
   RoutePath get home => paths.home;
 
   final List<RouteDefinition> all = [
-    new RouteDefinition(
+    RouteDefinition(
       routePath: paths.crisis,
       component: cct.CrisisComponentNgFactory,
     ),
-    new RouteDefinition(
+    RouteDefinition(
       routePath: paths.home,
       component: clhct.CrisisListHomeComponentNgFactory,
       useAsDefault: true,

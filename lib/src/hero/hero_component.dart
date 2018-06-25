@@ -27,8 +27,6 @@ class HeroComponent implements OnActivate {
     if (id != null) hero = await (_heroService.get(id));
   }
 
-  Future<NavigationResult> goBack() => _router.navigate(
-      paths.heroes.toUrl(),
-      new NavigationParams(
-          queryParameters: {paths.idParam: hero.id.toString()}));
+  Future<NavigationResult> goBack() => _router.navigate(paths.heroes.toUrl(),
+      NavigationParams(queryParameters: {paths.idParam: hero.id.toString()}));
 }

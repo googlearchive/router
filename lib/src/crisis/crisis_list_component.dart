@@ -16,9 +16,9 @@ import 'routes.dart';
   styleUrls: ['crisis_list_component.css'],
   directives: [coreDirectives, RouterOutlet],
   providers: [
-    const ClassProvider(CrisisService),
-    const ClassProvider(DialogService),
-    const ClassProvider(Routes),
+    ClassProvider(CrisisService),
+    ClassProvider(DialogService),
+    ClassProvider(Routes),
   ],
 )
 class CrisisListComponent extends Object
