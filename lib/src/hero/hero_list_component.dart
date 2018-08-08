@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 
-import '../route_paths.dart' as paths;
+import '../route_paths.dart';
 import 'hero.dart';
 import 'hero_service.dart';
 
@@ -26,13 +26,13 @@ class HeroListComponent implements OnActivate {
   }
 
   @override
-  Future<void> onActivate(_, RouterState current) async {
+  void onActivate(_, RouterState current) async {
     await _getHeroes();
     selected = _select(current);
   }
 
   Hero _select(RouterState routerState) {
-    final id = paths.getId(routerState.queryParameters);
+    final id = getId(routerState.queryParameters);
     return id == null
         ? null
         : heroes.firstWhere((e) => e.id == id, orElse: () => null);
@@ -41,7 +41,7 @@ class HeroListComponent implements OnActivate {
   void onSelect(Hero hero) => _gotoDetail(hero.id);
 
   String _heroUrl(int id) =>
-      paths.hero.toUrl(parameters: {paths.idParam: id.toString()});
+      RoutePaths.hero.toUrl(parameters: {idParam: '$id'});
 
   Future<NavigationResult> _gotoDetail(int id) =>
       _router.navigate(_heroUrl(id));

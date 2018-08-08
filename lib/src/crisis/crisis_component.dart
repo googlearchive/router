@@ -8,7 +8,7 @@ import '../instance_logger.dart';
 import 'crisis.dart';
 import 'crisis_service.dart';
 import 'dialog_service.dart';
-import 'route_paths.dart' as paths;
+import 'route_paths.dart';
 
 @Component(
   selector: 'my-crisis',
@@ -31,9 +31,9 @@ class CrisisComponent extends Object
   }
 
   @override
-  Future<void> onActivate(_, RouterState current) async {
+  void onActivate(_, RouterState current) async {
     log('onActivate: ${_?.toUrl()} -> ${current?.toUrl()}');
-    final id = paths.getId(current.parameters);
+    final id = getId(current.parameters);
     if (id == null) return null;
     crisis = await (_crisisService.get(id));
     name = crisis?.name;
@@ -51,7 +51,8 @@ class CrisisComponent extends Object
     goBack();
   }
 
-  Future<NavigationResult> goBack() => _router.navigate(paths.home.toUrl());
+  Future<NavigationResult> goBack() =>
+      _router.navigate(RoutePaths.home.toUrl());
 
   @override
   Future<bool> canNavigate() async {

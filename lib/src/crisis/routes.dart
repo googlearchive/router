@@ -1,22 +1,24 @@
 import 'package:angular_router/angular_router.dart';
 
-import 'crisis_component.template.dart' as cct;
-import 'crisis_list_home_component.template.dart' as clhct;
-import 'route_paths.dart' as paths;
+import 'crisis_component.template.dart' as crisis_template;
+import 'crisis_list_home_component.template.dart' as crisis_list_home_template;
+import 'route_paths.dart';
+
+export 'route_paths.dart';
 
 class Routes {
-  RoutePath get crisis => paths.crisis;
-  RoutePath get home => paths.home;
+  static final crisis = RouteDefinition(
+    routePath: RoutePaths.crisis,
+    component: crisis_template.CrisisComponentNgFactory,
+  );
+  static final home = RouteDefinition(
+    routePath: RoutePaths.home,
+    component: crisis_list_home_template.CrisisListHomeComponentNgFactory,
+    useAsDefault: true,
+  );
 
-  final List<RouteDefinition> all = [
-    RouteDefinition(
-      routePath: paths.crisis,
-      component: cct.CrisisComponentNgFactory,
-    ),
-    RouteDefinition(
-      routePath: paths.home,
-      component: clhct.CrisisListHomeComponentNgFactory,
-      useAsDefault: true,
-    ),
+  static final all = <RouteDefinition>[
+    crisis,
+    home,
   ];
 }
